@@ -1,0 +1,96 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.bg {
+  padding-top: 3rem;
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-color {
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+  background: rgb(214,223,166);
+  background: linear-gradient(90deg, rgba(214,223,166,1) 1%, rgba(207,240,214,1) 59%);
+}
+
+#mainDiv {
+  z-index: 1;
+  padding-top: 10%;
+}
+
+.container {
+  padding-top: 5rem;
+}
+
+.auth-form {
+  margin: auto;
+  width: 100%;
+}
+
+#usernameerror, #error {
+  color: red;
+}
+
+.card {
+  margin: 0 10px;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+.img-fluid {
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.cart-img {
+  width: 135px;
+  height: 135px;
+}
+
+#uploaded_img {
+  max-width: 400px;
+  max-height: 450px;
+}
+
+.pagination > span {
+  margin: auto 10px;
+}
+
+.icon {
+  width: 20x;
+  height: 20px;
+}
+
+.card-title {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.price {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.price-lite {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.del-cart {
+  padding-top: 0em;
+}

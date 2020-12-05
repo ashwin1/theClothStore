@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-6">
+                <img src="/images/items/<%=item.imageUrl%>" class="img-fluid w-100 h-auto" alt="item image">
+            </div>
+            <div class="col-6 details">
+                <h2><%=item.itemname%></h2>
+                <% if(user && user.type == 'admin') { %>
+                    <a href="/items/edit/<%=item._id%>" class="btn btn-sm btn-warning">Edit</a>
+                    <% if (!item.deleted) { %>
+                        <form class="form-inline" action="/items/delete/<%=item._id%>?_method=DELETE" method="POST" style="display: inline;">
+                            <button class="btn btn-sm btn-danger ml-2">Delete</button>
+                        </form>
+                    <% } %>
+                <% } %>
+                <p class="lead"><%=item.description%></p>
+                <p>Price: <span class="price">$<%=item.price%></span></p>
+                <% if(user && !item.deleted){ %>
+                    <form class="mt-2" action="/cart/add" method="POST">
+                        <input value="<%=item._id%>" type="hidden" name="id">
+                        <label for="size">Select size:</label>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="radio" name="size" id="XS" value="XS" aria-label="Extra small" required>
+                                <label for="XS">XS</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="size" id="S" value="S" aria-label="Small" required>
+                                <label for="S">S</label>
+                            </div>
+                            <div class="col">
+                                    <input type="radio" name="size" id="M" value="M" aria-label="Medium" required>
+                                    <label for="M">M</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="size" id="L" value="L" aria-label="Large" required>
+                                <label for="L">L</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" name="size" id="XL" value="XL" aria-label="Extra Large" required>
+                                <label for="XL">XL</label>
+                            </div>
+                        </div>
+                        <div  class="form-group w-25">
+                            <label for="quantity">Quantity:</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" value="1" step="1" min="1" max="5" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Add to cart</button>
+                    </form>
+                <%}%>
+            </div>
+        </div>
+    </div>
+<%- include('../partials/footer') %></div>
