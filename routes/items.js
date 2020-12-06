@@ -26,7 +26,7 @@ var upload = multer({ storage: storage})
 
 // items pages
 router.get('/', function(req, res, next) {
-    var itemsPerPage = 4;
+    var itemsPerPage = 8;
     var page = isNaN(req.query.page) ? 1 : Number(req.query.page);
     var clause = {deleted: false};
     if (req.user && req.user.type === 'admin') clause = {};

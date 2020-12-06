@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5925ace-8aee-4a86-8303-159f98b97722" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/public/images/item_image-1587252285695-925698973.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cart/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cart/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/items/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/items/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/items/new.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/items/new.ejs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lFmHnNk6IGQLMvzwl8FbyQn81V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5925ace-8aee-4a86-8303-159f98b97722" name="Default Changelist" comment="" />
+      <created>1607201128457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607201128457</updated>
+      <workItem from="1607201130377" duration="450000" />
+      <workItem from="1607204972362" duration="488000" />
+      <workItem from="1607207067885" duration="2630000" />
+      <workItem from="1607210034585" duration="587000" />
+      <workItem from="1607213020788" duration="1792000" />
+      <workItem from="1607214829632" duration="1473000" />
+      <workItem from="1607217231773" duration="277000" />
+      <workItem from="1607220262563" duration="1222000" />
+      <workItem from="1607223305860" duration="1329000" />
+      <workItem from="1607225768589" duration="679000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607214844860">
+      <screen x="0" y="23" width="1680" height="933" />
+    </state>
+    <state x="304" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.933@0.23.1680.933" timestamp="1607214844860" />
+    <state x="541" y="122" width="598" height="735" key="find.popup" timestamp="1607223873915">
+      <screen x="0" y="23" width="1680" height="933" />
+    </state>
+    <state x="541" y="122" width="598" height="735" key="find.popup/0.23.1680.933@0.23.1680.933" timestamp="1607223873915" />
+    <state x="618" y="125" width="684" height="759" key="find.popup/0.23.1920.963@0.23.1920.963" timestamp="1607207471881" />
+  </component>
+</project>
