@@ -2,40 +2,31 @@
 <div class="bg-color">
     <div class="container">
         <div class="row justify-content-around">
-            <div class="mt-5 text-center col-6">
-                <h1 class="display-1" style="font-family: 'Lobster', cursive;">Dress Up</h1>
-                <p class="display-4">The Ultimate Fasion Store</p>
-            </div>
             <div class="mt-3 p-3 col-5 border rounded bg-light shadow">
-                <h3 class="text-center">Please signup</h3>
+                <h3 class="text-center">Sign Up</h3>
                 <form class="auth-form" action="/signup" method="POST" onsubmit="validate(event)">
                     <div class="form-group">
-                        <label for="username">User Name</label>
-                        <input type="text" class="form-control" id="username" aria-describedby="usernamehelp" placeholder="johndoe" name="username" required onchange="handleUsernameChange(event)">
-                        <small id="usernamehelp" class="form-text text-muted">This will identify you</small>
+                        <input type="text" class="form-control" id="username" aria-describedby="usernamehelp" placeholder="User Name" name="username" required onchange="handleUsernameChange(event)">
                         <small id="usernameerror"></small>
                     </div>
                     <div class="form-row">
                         <div class="form-group col">
-                            <label for="firstname">First Name</label>
-                            <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname" required>
+                            <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" required>
                         </div>
                         <div class="form-group col">
-                            <label for="lastname">Last Name</label>
-                            <input type="text" class="form-control" id="lastname" placeholder="Doe" name="lastname" required>
+                            <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
                         <div>
-                            <input type="password" class="form-control" id="password" name="password" onkeydown="analyze(event)">
+                            <input type="password" placeholder="Password" class="form-control" id="password" name="password" onkeydown="analyze(event)">
                             <small id="error"></small>
                             <small class="form-text text-muted">- must contain alphanumeric and special characters</small>
                             <small class="form-text text-muted">- must contain lower and upper case letters</small>
                             <small class="form-text text-muted">- must be atleast 8 characters long</small>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Signup</button>
+                    <button type="submit" class="btn btn-info">Sign Up</button>
                 </form>
             </div>
         </div>

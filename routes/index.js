@@ -6,7 +6,7 @@ var History = require('../models/history');
 var passport = require('passport');
 
 router.get('/', function(req, res, next) {
-  res.render('main', { title: 'Best clothing store' });
+  return res.render('main', { title: 'Best clothing store' });
 });
 
 // signup page
@@ -80,10 +80,16 @@ router.post('/login',
   })
 );
 
-/* Logout a user */
+
 router.get('/logout', function(req, res) {
   req.logout();
-  return res.redirect('/items');
+  return res.redirect('/');
 });
-
 module.exports = router;
+
+/*Contact Us*/
+router.get('/contact', function(req, res) {
+  //req.logout();
+  console.log("I am in contacts");
+  return res.render('auth/contact');
+});

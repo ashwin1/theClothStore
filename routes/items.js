@@ -29,14 +29,20 @@ router.get('/', function(req, res, next) {
     var itemsPerPage = 8;
     var page = isNaN(req.query.page) ? 1 : Number(req.query.page);
     var clause = {deleted: false};
-    if (req.user && req.user.type === 'admin') clause = {};
-    if (req.query.filter && req.query.filter.trim() !== "") {
-        clause.category = req.query.filter;
+    console.log('filter val',req.query);
+    // if (req.user && req.user.type === 'admin') clause = {};
+    if (req.query.filter1 && req.query.filter1.length>0) {
+        clause.category = req.query.filter1;
+    }
+    if (req.query.filter2 && req.query.filter2.length>0) {
+        clause.people = req.query.filter2;
     }
     if (req.query.search && req.query.search.trim() !== "") {
         clause.itemname = new RegExp('.*' + req.query.search.trim() + '.*', 'i');
     }
     console.log("zzzzzz clause ", clause)
+
+    console.log("zzzzzz clause cat", clause.category);
     Item.find(clause)
         .skip(itemsPerPage * (page-1))
         .limit(itemsPerPage)
@@ -55,7 +61,8 @@ router.get('/', function(req, res, next) {
                         items: docs, 
                         page: page, 
                         maxPages: Math.ceil(count/itemsPerPage),
-                        filter: req.query.filter,
+                        filter1: req.query.filter1,
+                        filter2: req.query.filter2,
                         search: req.query.search
                     });
             });
@@ -69,6 +76,7 @@ router.get('/add', authObj.isAdmin, function(req, res, next) {
 
 // render a form to update a new item
 router.get('/edit/:id', authObj.isAdmin, function(req, res, next) {
+    console.log("FUCK");
     let clause = {_id: req.params.id, deleted: false};
     if (req.user && req.user.type === 'admin') delete clause.deleted;
     Item.findOne(clause, function(err, doc) {
@@ -97,11 +105,13 @@ router.get('/view/:id', function(req, res, next) {
 
 // Create a new item with all item size of count 1
 router.post('/add', authObj.isAdmin, upload.single('item-image'), function(req, res, next){
+    console.log(req.body);
     var item = new Item({
         _id: new mongoose.Types.ObjectId(),
         itemname: req.body.itemname,
         description: req.body.description || "",
         category: req.body.category,
+        people: req.body.people,
         price: req.body.price,
         imageUrl: req.file ? req.file.filename : 'default.jpg',
         deleted: false,
@@ -121,6 +131,9 @@ router.post('/add', authObj.isAdmin, upload.single('item-image'), function(req, 
 
 // Update a item
 router.put('/edit/:id', authObj.isAdmin, upload.single('item-image'), function(req, res, next) {
+    console.log("LOLOL");
+    debugger
+    console.log("entered edit put");
     if (req.file) {
         if (req.body.imageUrl) {
             fs.unlink(path.join(path.resolve(__dirname, '..'), '/public/images/items/', req.body.imageUrl), function(err) {
@@ -139,8 +152,10 @@ router.put('/edit/:id', authObj.isAdmin, upload.single('item-image'), function(r
     }
     console.log(req.body);
     Item.findByIdAndUpdate(req.params.id, req.body, function(err, item){
+        console.log("WTF");
+        debugger
         if (err) {
-            err = "Something went wrong while updating the item";
+            err = "hello Something went wrong while updating the item";
             return next(err);
         }
         return res.redirect('/items/view/' + req.params.id);
@@ -187,6 +202,8 @@ router.delete('/delete/:id', authObj.isAdmin, function(req, res, next) {
             return res.redirect('/items');
         })
     });
+
+    
 })
 
 module.exports = router;
