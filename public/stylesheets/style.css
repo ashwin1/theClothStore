@@ -17,11 +17,33 @@ body, html {
 .bg-color {
   height: 100%;
   width: 100%;
-  /* Center and scale the image nicely */
   background-position: center;
   background-size: cover;
-  background: rgb(214,223,166);
-  background: linear-gradient(90deg, rgba(214,223,166,1) 1%, rgba(207,240,214,1) 59%);
+  background: #aaf0d1;
+  background-image: url("/images/items/backimg.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+.sidename{
+  background-color: #aaf0d1;
+  height: 100vh ! important;
+}
+.title1{
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+}
+
+.title2{
+  font-size: 25px;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:black;
+  height: 0.5px;
 }
 
 #mainDiv {
@@ -30,7 +52,8 @@ body, html {
 }
 
 .container {
-  padding-top: 5rem;
+  padding-top: 3.6rem;
+  margin-left: 0;
 }
 
 .auth-form {

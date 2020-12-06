@@ -1,7 +1,57 @@
 <%- include('../partials/header') %>
     <div class="container">
-        <div class="row justify-content-center pb-2">
-            <form class="form-inline my-2 my-lg-0" action="/items" method="GET">
+        <div class="row">
+            <div class="col-lg-3 sidename">
+                <h5>FILTERS:</h5>
+                <% if (filter1 || search) { %>
+                    <a href="/items/" class="btn btn-outline-action btn-sm my-2 my-sm-0 ml-1">Clear</a>
+                <% } %>
+                <form class="form my-2 my-lg-0" action="/items" method="GET">
+                <input class="form-control form-control-sm mr-sm-2" type="search" name="search" placeholder="Search...." id="search" aria-label="Search">
+                <hr>
+                    <div><a>Category:</a></div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="filter1" id="dresses" value="dresses">
+                        <label class="form-check-label" for="exampleCheck1">Dresses</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="filter1" id="trousers" value="trousers">
+                        <label class="form-check-label" for="exampleCheck1">Trousers</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="filter1" id="shirt" value="shirt">
+                        <label class="form-check-label" for="exampleCheck1" >Shirt</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="activewear" name="filter1" value="activewear">
+                        <label class="form-check-label" for="exampleCheck1">Active Wear</label>
+                    </div>
+                    <hr>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="filter2" id="men" value="men">
+                        <label class="form-check-label" for="exampleCheck1">Men</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="filter2" id="women" value="women">
+                        <label class="form-check-label" for="exampleCheck1">Women</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="filter2" id="kids" value="kids">
+                        <label class="form-check-label" for="exampleCheck1">Kids</label>
+                    </div>
+                    <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit">Search</button>
+                    
+                </form>
+                
+                
+                
+
+            </div>
+            <div class="col-lg-8">
+            <div class="row justify-content-center pb-2">
+            <!-- <form class="form-inline my-2 my-lg-0" action="/items" method="GET">
                 <select class="form-control form-control-sm mr-2" id="filter" name="filter">
                   <option value="" selected>Filter</option>
                   <option value="shirt">Shirt</option>
@@ -11,10 +61,10 @@
                 </select>
                 <input class="form-control form-control-sm mr-sm-2" type="search" name="search" placeholder="Search" id="search" aria-label="Search">
                 <button class="btn btn-outline-success btn-sm my-2 my-sm-0" type="submit">Search</button>
-                <% if (filter || search) { %>
+                <% if (filter1 || search) { %>
                     <a href="/items/" class="btn btn-outline-action btn-sm my-2 my-sm-0 ml-1">Clear</a>
                 <% } %>
-            </form>
+            </form> -->
         </div>
         <div class="row justify-content-center mt-1">
             <% items.forEach(item => { %>
@@ -40,7 +90,7 @@
             <ul class="pagination justify-content-center">
             <% if (page > 1) { %>
                 <li class="page-item">
-                    <a class="page-link" href="/items/?<%if(filter){%>filter=<%=filter%>&search=<%=search%>&<%}%>page=<%=Number(page)-1%>">Prev</a>
+                    <a class="page-link" href="/items/?<%if(filter1){%>filter1=<%=filter1%>&search=<%=search%>&<%}%>page=<%=Number(page)-1%>">Prev</a>
                 </li>
             <% } else { %>
                 <li class="page-item disabled">
@@ -55,7 +105,7 @@
               </li>
             <% if (Number(page) + 1 <= Number(maxPages)) { %>
                 <li class="page-item">
-                    <a class="page-link" href="/items/?<%if(filter){%>filter=<%=filter%>&search=<%=search%>&<%}%>page=<%=Number(page)+1%>">Next</a>
+                    <a class="page-link" href="/items/?<%if(filter1){%>filter1=<%=filter1%>&search=<%=search%>&<%}%>page=<%=Number(page)+1%>">Next</a>
                 </li>
             <% } else { %>
                 <li class="page-item disabled">
@@ -64,9 +114,11 @@
             <% } %>
             </ul>
         </nav>
+        </div>
+        </div>
     </div>
     <script>
-        var selectedOption = "<%=filter%>";
+        var selectedOption = "<%=filter1%>";
         var search = "<%=search%>";
         if (selectedOption) {
             $('select').val(selectedOption);

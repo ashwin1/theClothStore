@@ -10,14 +10,14 @@
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/"><img src="/icons/shirt.svg" alt="" class="w-25 h-25" /> Dress Up</a>
+      <a class="navbar-brand" href="/items">The Cloth Store</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/items">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <% if (user && user.type === 'admin') { %>
             <li class="nav-item">
@@ -26,18 +26,17 @@
           <% } %>
         </ul>
         <% if (user) {%>
-          <span class="navbar-nav nav-item">
-            <a class="nav-link btn" href="/history">History</a>
-          </span>
-          <span class="navbar-nav nav-item">
-            <a class="nav-link btn" href="/cart">Cart <span class="badge badge-light"><%=user.cartSize%> </span></a>
-          </span>
-          <span class="navbar-nav nav-item">
-            <span class="navbar-text ">Signed in as <strong><%=user.username%></strong></a>
-          </span>
-          <span class="navbar-nav nav-item">
-            <a class="nav-link" href="/logout">Logout</a>
-          </span>
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%=user.username.toUpperCase()%>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/history">History</a>
+            <a class="dropdown-item" href="/cart">Cart</a>
+            <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+          </div>
+          
         <%} else {%>
           <span class="navbar-nav nav-item">
             <a class="nav-link" href="/login">Login</a>
@@ -46,6 +45,9 @@
             <a class="nav-link" href="/signup">Signup</a>
           </span>
         <% } %>
+        <span class="navbar-nav nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </span>
         </div>
       </div>
     </nav>

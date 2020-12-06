@@ -29,14 +29,17 @@ router.get('/', function(req, res, next) {
     var itemsPerPage = 4;
     var page = isNaN(req.query.page) ? 1 : Number(req.query.page);
     var clause = {deleted: false};
-    if (req.user && req.user.type === 'admin') clause = {};
-    if (req.query.filter && req.query.filter.trim() !== "") {
-        clause.category = req.query.filter;
+    console.log('filter val',req.query);
+    // if (req.user && req.user.type === 'admin') clause = {};
+    if (req.query.filter1 && req.query.filter1.length>0) {
+        clause.category = req.query.filter1;
     }
     if (req.query.search && req.query.search.trim() !== "") {
         clause.itemname = new RegExp('.*' + req.query.search.trim() + '.*', 'i');
     }
     console.log("zzzzzz clause ", clause)
+
+    console.log("zzzzzz clause cat", clause.category);
     Item.find(clause)
         .skip(itemsPerPage * (page-1))
         .limit(itemsPerPage)
@@ -55,7 +58,7 @@ router.get('/', function(req, res, next) {
                         items: docs, 
                         page: page, 
                         maxPages: Math.ceil(count/itemsPerPage),
-                        filter: req.query.filter,
+                        filter1: req.query.filter1,
                         search: req.query.search
                     });
             });
@@ -187,6 +190,8 @@ router.delete('/delete/:id', authObj.isAdmin, function(req, res, next) {
             return res.redirect('/items');
         })
     });
+
+    
 })
 
 module.exports = router;
