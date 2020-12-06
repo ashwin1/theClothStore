@@ -42,41 +42,40 @@
                 <p>Total = <span class="price-lite">$<%=total.toFixed(2)%></span></p>
                 <div class="form-row">
                   <div class="form-group col-md-12">
-                    <label for="cardname">Name on card</label>
-                    <input type="text" class="form-control" id="cardname" >
+                    <input type="text" placeholder="Name on card" class="form-control" id="cardname" >
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="cardnumber">Card Number</label>
-                    <input type="text" class="form-control" id="cardnumber" >
+                    <!-- <label for="cardnumber">Card Number</label> -->
+                    <input type="text" placeholder="Card Number" class="form-control" id="cardnumber" >
                   </div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email">
+                    <!-- <label for="email">Email</label> -->
+                    <input type="email" placeholder="Email ID" class="form-control" id="email">
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="fullname">Name</label>
-                    <input type="text" class="form-control" id="fullname" >
+                    <!-- <label for="fullname">Name</label> -->
+                    <input type="text" placeholder="Name" class="form-control" id="fullname" >
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress">Address</label>
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Dallas, Texas" >
+                  <!-- <label for="inputAddress">Address</label> -->
+                  <input type="text" class="form-control" placeholder="Address" id="inputAddress" placeholder="Dallas, Texas" >
                 </div>
                 <div class="form-group">
-                  <label for="inputAddress2">Delivery Instructions | Edit Address</label>
-                  <input type="text" class="form-control" id="inputAddress2" placeholder="" >
+                  <!-- <label for="inputAddress2">Delivery Instructions | Edit Address</label> -->
+                  <input type="text" class="form-control" placeholder="Delivery Instructions" id="inputAddress2" placeholder="" >
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-12">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity" >
+                    <!-- <label for="inputCity">City</label> -->
+                    <input type="text" placeholder="City" class="form-control" id="inputCity" >
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="inputState">State</label>
+                    <!-- <label for="inputState">State</label> -->
                     <select id="inputState" class="form-control" >
-                      <option selected>Choose...</option>
+                      <option selected>State</option>
                       <option>Dallas</option>
                       <option>Austin</option>
                       <option>San Antonio</option>
@@ -88,8 +87,7 @@
                     </select>
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip" >
+                    <input type="text" placeholder="Zip" class="form-control" id="inputZip" >
                   </div>
                 </div>
                 <button type="submit" class="btn btn-success">Checkout</button>

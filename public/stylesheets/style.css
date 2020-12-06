@@ -5,13 +5,15 @@ body, html {
 
 .bg {
   padding-top: 3rem;
-  /* Full height */
   height: 100%;
   width: 100%;
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+form.form.my-2.my-lg-0 {
+  position: fixed;
 }
 
 .bg-color {
@@ -24,10 +26,13 @@ body, html {
   background-size: cover;
   background-blend-mode: darken;
 }
-.sidename{
-  background-color: #aaf0d1;
-  height: 100vh ! important;
+
+.sidename {
+  color: black;
+  background-color: navajowhite;
+  min-height: 100vh ! important;
 }
+
 .title1{
   font-family: 'Lobster', cursive;
   font-size: 75px;
@@ -53,6 +58,7 @@ hr {
 
 .container {
   padding-top: 3.6rem;
+  padding-bottom: 2.6rem;
   margin-left: 0;
 }
 
@@ -103,7 +109,11 @@ hr {
   font-size: x-large;
   font-weight: bolder;
 }
-
+.button{
+  margin: 25px;
+  /* margin-top: 10px; */
+ 
+}
 .price {
   font-size: x-large;
   font-weight: 800;
@@ -116,4 +126,9 @@ hr {
 
 .del-cart {
   padding-top: 0em;
+}
+.cartimg{
+  height: 25px;
+  width: 25px;
+  /* background-color: white; */
 }
