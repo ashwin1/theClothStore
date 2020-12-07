@@ -1,42 +1,13 @@
 <%- include('../partials/header') %>
+
     <div class="container pt-5">
-        <h1 class="text-center mt-2">Shopping Summary</h1>
+
         <% if (cart.items.length == 0) { %>
-          <h1 class="text-center mt-5">It is empty here. Add some styles to the cart</h1>
+        <h1 class="text-center mt-2">Shopping Summary</h1>
+          <h1 class="text-center mt-7">It is empty here. Add some styles to the cart</h1>
         <% } else { %>
           <div class="row justify-content-between">
-            <div class="col-6 mt-2">
-              <% cart.items.forEach(item => { %>
-                  <% i = item.itemid %>
-                  <div class="card mb-3" style="max-width: 540px; margin: auto;">
-                      <div class="row no-gutters">
-                        <div class="col-md-4">
-                          <img src="/images/items/<%=i.imageUrl%>" class="card-img w-100" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <div class="d-flex justify-content-between">
-                              <h5 class="card-title"><%=i.itemname%></h5>
-                              <form class="form-inline" action="/cart/delete/<%=item._id%>?_method=DELETE" method="POST" style="display: inline;">
-                                <button class="btn btn-sm ml-2"><img src="/icons/bin.svg" class="icon" alt="del"/></button>
-                              </form>
-                            </div>
-                            <p class="card-text mb-1"><small class="text-muted"><%=moment(item.date).format('MMM-DD-YYYY')%></small></p>
-                            <p class="card-text mb-0">Size: <%=item.size%></p>
-                            <form class="form-inline mt-1" action="/cart/edit?_method=PUT" method="POST">
-                              <input type="hidden" value="<%=item._id%>" name="id"><input type="hidden" value="<%=item.size%>" name="size">
-                              <label for="quantity">Quantity: </label>
-                              <input class="form-control form-control-sm mx-1" type="number" name="quantity" min="1" max="5" value="<%=item.quantity%>" required>
-                              <button class="btn btn-primary btn-sm">Edit</button>
-                            </form>
-                            <p class="card-text mt-2">Total: <%=item.quantity%> x $<%=i.price%> = <span class="price-lite">$<%=(item.quantity * i.price).toFixed(2)%></span></p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-              <% }) %>
-            </div>
-            <div class="col-5">
+            <div class="col-5 summarycard">
               <form action="/cart/purchase" method="POST">
                 <h2>Payment Method</h2>
                 <p>Total = <span class="price-lite">$<%=total.toFixed(2)%></span></p>
@@ -90,9 +61,44 @@
                     <input type="text" placeholder="Zip" class="form-control" id="inputZip" >
                   </div>
                 </div>
-                <button type="submit" class="btn btn-success">Checkout</button>
+                <button type="submit" class="btn btn-dark">Checkout</button>
               </form>
             </div>
+            <div class="col-6 mt-2">
+
+              <div class="card summarycard" >
+                <h1 class="text-center mt-2">Cart Summary</h1>
+                <% cart.items.forEach(item => { %>
+                  <% i = item.itemid %>
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="/images/items/<%=i.imageUrl%>" class="card-image-cart" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <h5 class="card-title"><%=i.itemname%></h5>
+                          <form class="form-inline" action="/cart/delete/<%=item._id%>?_method=DELETE" method="POST" style="display: inline;">
+                            <button class="btn btn-sm ml-2">delete</button>
+                          </form>
+                        </div>
+                        <p class="card-text mb-1"><small class="text-muted"><%=moment(item.date).format('MMM-DD-YYYY')%></small></p>
+                        <p class="card-text mb-0">Size: <%=item.size%></p>
+                        <form class="form-inline mt-1" action="/cart/edit?_method=PUT" method="POST">
+                          <input type="hidden" value="<%=item._id%>" name="id"><input type="hidden" value="<%=item.size%>" name="size">
+                          <label for="quantity">Quantity: </label>
+                          <input class="form-control form-control-sm mx-1" type="number" name="quantity" min="1" max="5" value="<%=item.quantity%>" required>
+                          <button class="btn btn-dark btn-sm">Edit</button>
+                        </form>
+                        <p class="card-text mt-2">Total: <%=item.quantity%> x $<%=i.price%> = <span class="price-lite">$<%=(item.quantity * i.price).toFixed(2)%></span></p>
+                      </div>
+                    </div>
+                  </div>
+                <% }) %>
+              </div>
+
+            </div>
+
           </div>
         <% } %>
     </div>

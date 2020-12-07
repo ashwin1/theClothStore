@@ -15,11 +15,11 @@ router.get('/', authObj.isLoggedIn, function(req, res, next){
             err = "Something went wrong while retrieving user's cart details";
             return next(err);
         }
-        let total = 0;
+        let tot = 0;
         doc.items.forEach(item => {
-            total += item.itemid.price * item.quantity;
+            tot = tot +  item.itemid.price * item.quantity;
         });
-        return res.render('cart/index', {cart: doc, moment: moment, total: total});
+        return res.render('cart/index', {cart: doc, moment: moment, total: tot});
    });
 });
 

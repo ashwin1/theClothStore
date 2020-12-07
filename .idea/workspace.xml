@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5925ace-8aee-4a86-8303-159f98b97722" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/images/item_image-1587252285695-925698973.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/items.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/items.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/cart/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/cart/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/history/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/history/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/items/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/items/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/items/new.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/items/new.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/items/item.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/items/item.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +50,15 @@
       <workItem from="1607220262563" duration="1222000" />
       <workItem from="1607223305860" duration="1329000" />
       <workItem from="1607225768589" duration="679000" />
+      <workItem from="1607246865327" duration="267000" />
+      <workItem from="1607288153016" duration="1612000" />
+      <workItem from="1607289988493" duration="1741000" />
+      <workItem from="1607291867837" duration="1664000" />
+      <workItem from="1607293744016" duration="1670000" />
+      <workItem from="1607295558777" duration="1370000" />
+      <workItem from="1607297536587" duration="1644000" />
+      <workItem from="1607299452949" duration="1732000" />
+      <workItem from="1607301752452" duration="507000" />
     </task>
     <servers />
   </component>
@@ -56,9 +70,11 @@
       <screen x="0" y="23" width="1680" height="933" />
     </state>
     <state x="304" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.933@0.23.1680.933" timestamp="1607214844860" />
-    <state x="541" y="122" width="598" height="735" key="find.popup" timestamp="1607223873915">
-      <screen x="0" y="23" width="1680" height="933" />
+    <state x="541" y="112" width="599" height="828" key="find.popup" timestamp="1607298586525">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="541" y="112" width="599" height="828" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1607298586525" />
+    <state x="618" y="115" width="684" height="851" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1607288391007" />
     <state x="541" y="122" width="598" height="735" key="find.popup/0.23.1680.933@0.23.1680.933" timestamp="1607223873915" />
     <state x="618" y="125" width="684" height="759" key="find.popup/0.23.1920.963@0.23.1920.963" timestamp="1607207471881" />
   </component>

@@ -1,8 +1,9 @@
 <%- include('../partials/header') %>
-    <div class="container">
-            <h1 class="text-center mt-1 mb-3">History</h1>
+    <div class="full_container ">
+    <div class="container ">
+            <h1 class="text-center mt-1 mb-3 history_title">Your Orders</h1>
             <% if(history.items.length == 0) {%>
-              <h1 class="text-center mt-5">You have not bought any items yet!</h1>
+              <h1 class="text-center mt-5">No orders yet!</h1>
             <% } %>
             <% history.items.forEach(item => { %>
                 <% i = item.itemid %>
@@ -25,4 +26,5 @@
                 </div>
             <% }) %>
         </div>
+    </div>
 <%- include('../partials/footer') %>

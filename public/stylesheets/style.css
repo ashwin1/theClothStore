@@ -29,7 +29,7 @@ form.form.my-2.my-lg-0 {
 
 .sidename {
   color: black;
-  background-color: navajowhite;
+  background-color: gray;
   min-height: 100vh ! important;
 }
 
@@ -60,7 +60,11 @@ hr {
   padding-top: 3.6rem;
   padding-bottom: 2.6rem;
   margin-left: 0;
+  maxwidth: 100% !important;
 }
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+  }
 
 .auth-form {
   margin: auto;
@@ -75,6 +79,11 @@ hr {
   margin: 0 10px;
 }
 
+.item-card{
+  width: 16rem;
+  cursor: pointer;
+}
+
 .card-img-top {
   height: 250px;
 }
@@ -87,8 +96,15 @@ hr {
 }
 
 .cart-img {
+  margin: 0 10px;
   width: 135px;
   height: 135px;
+}
+
+.card-image-cart{
+  max-height: 200px;
+  max-width: 200px;
+  padding: 40px;
 }
 
 #uploaded_img {
@@ -131,4 +147,26 @@ hr {
   height: 25px;
   width: 25px;
   /* background-color: white; */
+}
+.summarycard{
+  margin: 15px;
+}
+
+.page-item.active .page-link {
+
+  background-color: indianred;
+  border-color: indianred;
+}
+
+.page-link {
+  color: indianred;
+}
+
+.full_container{
+  width:100%;
+  min-height: 100%;
+  background-color: gray;
+}
+.history_title{
+  color: white;
 }
